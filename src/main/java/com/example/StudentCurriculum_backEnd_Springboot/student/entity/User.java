@@ -2,6 +2,7 @@ package com.example.StudentCurriculum_backEnd_Springboot.student.entity;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -21,7 +22,7 @@ public class User implements Serializable {
 
     private String userPassword;
 
-    private LocalDateTime userCreateOfTime;
+    private Date userCreateOfTime;
 
     private Integer userRoleId;
 
@@ -49,11 +50,11 @@ public class User implements Serializable {
         this.userPassword = userPassword;
     }
 
-    public LocalDateTime getUserCreateOfTime() {
+    public Date getUserCreateOfTime() {
         return userCreateOfTime;
     }
 
-    public void setUserCreateOfTime(LocalDateTime userCreateOfTime) {
+    public void setUserCreateOfTime(Date userCreateOfTime) {
         this.userCreateOfTime = userCreateOfTime;
     }
 
