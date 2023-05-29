@@ -16,3 +16,9 @@ server:
 logging:
   level:
     com.example: debug
+#mybatis-plus:
+#  type-aliases-package: com.example.studentcurriculum_backend_springboot.student.entity
+#  global-config:
+#    banner: false
+#    db-config:
+#      id-type: input
