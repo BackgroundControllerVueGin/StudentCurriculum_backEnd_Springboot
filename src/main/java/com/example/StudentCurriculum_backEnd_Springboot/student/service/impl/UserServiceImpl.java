@@ -78,7 +78,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
             }else {
                 userName.add("admin");
             }
-            data.put("userName",userName);
+            data.put("data",userName);
             return data;
         }
         return null;
