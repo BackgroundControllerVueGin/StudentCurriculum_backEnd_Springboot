@@ -9,13 +9,13 @@ import java.time.LocalDate;
  * </p>
  *
  * @author blackhaird
- * @since 2023-05-29
+ * @since 2023-05-30
  */
 public class Student implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private String studentId;
+    private String studentJobId;
 
     private String studentName;
 
@@ -25,14 +25,14 @@ public class Student implements Serializable {
 
     private String studentMajor;
 
-    private String studentClass;
+    private String studentClassId;
 
-    public String getStudentId() {
-        return studentId;
+    public String getStudentJobId() {
+        return studentJobId;
     }
 
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
+    public void setStudentJobId(String studentJobId) {
+        this.studentJobId = studentJobId;
     }
 
     public String getStudentName() {
@@ -67,23 +67,23 @@ public class Student implements Serializable {
         this.studentMajor = studentMajor;
     }
 
-    public String getStudentClass() {
-        return studentClass;
+    public String getStudentClassId() {
+        return studentClassId;
     }
 
-    public void setStudentClass(String studentClass) {
-        this.studentClass = studentClass;
+    public void setStudentClassId(String studentClassId) {
+        this.studentClassId = studentClassId;
     }
 
     @Override
     public String toString() {
         return "Student{" +
-            "studentId = " + studentId +
+            "studentJobId = " + studentJobId +
             ", studentName = " + studentName +
             ", studentSex = " + studentSex +
             ", studentEnterYear = " + studentEnterYear +
             ", studentMajor = " + studentMajor +
-            ", studentClass = " + studentClass +
+            ", studentClassId = " + studentClassId +
         "}";
     }
 }

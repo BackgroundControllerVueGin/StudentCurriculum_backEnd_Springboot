@@ -1,5 +1,9 @@
 package com.example.StudentCurriculum_backEnd_Springboot.student.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -10,36 +14,37 @@ import java.util.Date;
  * </p>
  *
  * @author blackhaird
- * @since 2023-05-29
+ * @since 2023-05-30
  */
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private String userId;
+    @TableId(value = "user_id", type = IdType.AUTO)
+    private Integer userId;
 
-    private String jobId;
+    private String userJobId;
 
     private String userPassword;
-
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date userCreateOfTime;
 
     private Integer userRoleId;
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
-    public String getJobId() {
-        return jobId;
+    public String getUserJobId() {
+        return userJobId;
     }
 
-    public void setJobId(String jobId) {
-        this.jobId = jobId;
+    public void setUserJobId(String userJobId) {
+        this.userJobId = userJobId;
     }
 
     public String getUserPassword() {
@@ -70,7 +75,7 @@ public class User implements Serializable {
     public String toString() {
         return "User{" +
             "userId = " + userId +
-            ", jobId = " + jobId +
+            ", userJobId = " + userJobId +
             ", userPassword = " + userPassword +
             ", userCreateOfTime = " + userCreateOfTime +
             ", userRoleId = " + userRoleId +

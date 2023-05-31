@@ -9,7 +9,7 @@ import java.time.LocalDate;
  * </p>
  *
  * @author blackhaird
- * @since 2023-05-29
+ * @since 2023-05-30
  */
 public class Course implements Serializable {
 
@@ -23,13 +23,15 @@ public class Course implements Serializable {
 
     private String courseCredit;
 
-    private Integer deanId;
+    private String courseDeanJobId;
 
     private LocalDate courseStartDate;
 
     private LocalDate courseEndDate;
 
-    private String teacherId;
+    private String courseTeacherJobId;
+
+    private String courseClassId;
 
     public Integer getCourseId() {
         return courseId;
@@ -63,12 +65,12 @@ public class Course implements Serializable {
         this.courseCredit = courseCredit;
     }
 
-    public Integer getDeanId() {
-        return deanId;
+    public String getCourseDeanJobId() {
+        return courseDeanJobId;
     }
 
-    public void setDeanId(Integer deanId) {
-        this.deanId = deanId;
+    public void setCourseDeanJobId(String courseDeanJobId) {
+        this.courseDeanJobId = courseDeanJobId;
     }
 
     public LocalDate getCourseStartDate() {
@@ -87,12 +89,20 @@ public class Course implements Serializable {
         this.courseEndDate = courseEndDate;
     }
 
-    public String getTeacherId() {
-        return teacherId;
+    public String getCourseTeacherJobId() {
+        return courseTeacherJobId;
     }
 
-    public void setTeacherId(String teacherId) {
-        this.teacherId = teacherId;
+    public void setCourseTeacherJobId(String courseTeacherJobId) {
+        this.courseTeacherJobId = courseTeacherJobId;
+    }
+
+    public String getCourseClassId() {
+        return courseClassId;
+    }
+
+    public void setCourseClassId(String courseClassId) {
+        this.courseClassId = courseClassId;
     }
 
     @Override
@@ -102,10 +112,11 @@ public class Course implements Serializable {
             ", courseName = " + courseName +
             ", courseCreditshours = " + courseCreditshours +
             ", courseCredit = " + courseCredit +
-            ", deanId = " + deanId +
+            ", courseDeanJobId = " + courseDeanJobId +
             ", courseStartDate = " + courseStartDate +
             ", courseEndDate = " + courseEndDate +
-            ", teacherId = " + teacherId +
+            ", courseTeacherJobId = " + courseTeacherJobId +
+            ", courseClassId = " + courseClassId +
         "}";
     }
 }

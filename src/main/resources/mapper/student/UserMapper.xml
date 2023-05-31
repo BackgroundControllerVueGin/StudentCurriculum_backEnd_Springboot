@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.StudentCurriculum_backEnd_Springboot.student.mapper.UserMapper">
-    <select id="getTeacherNameByJobID" parameterType="string" resultType="string">
-        select teacher_name from user,teacher where user.user_id = teacher_id and job_id =#{jobId} ;
+    <select id="getTeacherNameByJobID" parameterType="string" resultType="java.lang.String">
+        select teacher_name from user,teacher where user.user_job_id = teacher_job_id and user_job_id =#{userJobId};
     </select>
-    <select id="getStudentNameByJobID" resultType="java.lang.String">
-        select student_id from user,student where user.user_id = student_id and job_id =#{jobId};
+    <select id="getStudentNameByJobID" parameterType="string" resultType="java.lang.String">
+        select student_name from user,student where user.user_job_id = student_job_id and user_job_id =#{userJobId};
     </select>
 </mapper>

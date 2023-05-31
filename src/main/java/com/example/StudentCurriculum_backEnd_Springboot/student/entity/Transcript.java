@@ -3,7 +3,7 @@ package com.example.StudentCurriculum_backEnd_Springboot.student.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 /**
  * <p>
@@ -11,45 +11,45 @@ import java.time.LocalDateTime;
  * </p>
  *
  * @author blackhaird
- * @since 2023-05-29
+ * @since 2023-05-30
  */
 public class Transcript implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "No", type = IdType.AUTO)
-    private Integer no;
+    @TableId(value = "transcript_id", type = IdType.AUTO)
+    private Integer transcriptId;
 
-    private String teacherId;
+    private String transcriptTreacherJobId;
 
-    private String studentId;
+    private String transcriptStudentJobId;
 
     private Integer transcriptSocre;
 
-    private LocalDateTime transcriptTime;
+    private LocalDate transcriptDate;
 
-    public Integer getNo() {
-        return no;
+    public Integer getTranscriptId() {
+        return transcriptId;
     }
 
-    public void setNo(Integer no) {
-        this.no = no;
+    public void setTranscriptId(Integer transcriptId) {
+        this.transcriptId = transcriptId;
     }
 
-    public String getTeacherId() {
-        return teacherId;
+    public String getTranscriptTreacherJobId() {
+        return transcriptTreacherJobId;
     }
 
-    public void setTeacherId(String teacherId) {
-        this.teacherId = teacherId;
+    public void setTranscriptTreacherJobId(String transcriptTreacherJobId) {
+        this.transcriptTreacherJobId = transcriptTreacherJobId;
     }
 
-    public String getStudentId() {
-        return studentId;
+    public String getTranscriptStudentJobId() {
+        return transcriptStudentJobId;
     }
 
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
+    public void setTranscriptStudentJobId(String transcriptStudentJobId) {
+        this.transcriptStudentJobId = transcriptStudentJobId;
     }
 
     public Integer getTranscriptSocre() {
@@ -60,22 +60,22 @@ public class Transcript implements Serializable {
         this.transcriptSocre = transcriptSocre;
     }
 
-    public LocalDateTime getTranscriptTime() {
-        return transcriptTime;
+    public LocalDate getTranscriptDate() {
+        return transcriptDate;
     }
 
-    public void setTranscriptTime(LocalDateTime transcriptTime) {
-        this.transcriptTime = transcriptTime;
+    public void setTranscriptDate(LocalDate transcriptDate) {
+        this.transcriptDate = transcriptDate;
     }
 
     @Override
     public String toString() {
         return "Transcript{" +
-            "no = " + no +
-            ", teacherId = " + teacherId +
-            ", studentId = " + studentId +
+            "transcriptId = " + transcriptId +
+            ", transcriptTreacherJobId = " + transcriptTreacherJobId +
+            ", transcriptStudentJobId = " + transcriptStudentJobId +
             ", transcriptSocre = " + transcriptSocre +
-            ", transcriptTime = " + transcriptTime +
+            ", transcriptDate = " + transcriptDate +
         "}";
     }
 }

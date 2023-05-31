@@ -8,13 +8,13 @@ import java.io.Serializable;
  * </p>
  *
  * @author blackhaird
- * @since 2023-05-29
+ * @since 2023-05-30
  */
 public class Teacher implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private String teacherId;
+    private String teacherJobId;
 
     private String teacherName;
 
@@ -22,12 +22,12 @@ public class Teacher implements Serializable {
 
     private Integer courseId;
 
-    public String getTeacherId() {
-        return teacherId;
+    public String getTeacherJobId() {
+        return teacherJobId;
     }
 
-    public void setTeacherId(String teacherId) {
-        this.teacherId = teacherId;
+    public void setTeacherJobId(String teacherJobId) {
+        this.teacherJobId = teacherJobId;
     }
 
     public String getTeacherName() {
@@ -57,7 +57,7 @@ public class Teacher implements Serializable {
     @Override
     public String toString() {
         return "Teacher{" +
-            "teacherId = " + teacherId +
+            "teacherJobId = " + teacherJobId +
             ", teacherName = " + teacherName +
             ", teacherSex = " + teacherSex +
             ", courseId = " + courseId +

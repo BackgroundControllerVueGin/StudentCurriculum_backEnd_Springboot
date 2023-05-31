@@ -8,27 +8,25 @@ import java.io.Serializable;
  * </p>
  *
  * @author blackhaird
- * @since 2023-05-29
+ * @since 2023-05-30
  */
 public class Class implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private Integer classId;
+    private String classId;
 
     private String className;
 
-    private Integer classYear;
+    private String classYear;
 
     private String classMajor;
 
-    private String coursetableId;
-
-    public Integer getClassId() {
+    public String getClassId() {
         return classId;
     }
 
-    public void setClassId(Integer classId) {
+    public void setClassId(String classId) {
         this.classId = classId;
     }
 
@@ -40,11 +38,11 @@ public class Class implements Serializable {
         this.className = className;
     }
 
-    public Integer getClassYear() {
+    public String getClassYear() {
         return classYear;
     }
 
-    public void setClassYear(Integer classYear) {
+    public void setClassYear(String classYear) {
         this.classYear = classYear;
     }
 
@@ -56,14 +54,6 @@ public class Class implements Serializable {
         this.classMajor = classMajor;
     }
 
-    public String getCoursetableId() {
-        return coursetableId;
-    }
-
-    public void setCoursetableId(String coursetableId) {
-        this.coursetableId = coursetableId;
-    }
-
     @Override
     public String toString() {
         return "Class{" +
@@ -71,7 +61,6 @@ public class Class implements Serializable {
             ", className = " + className +
             ", classYear = " + classYear +
             ", classMajor = " + classMajor +
-            ", coursetableId = " + coursetableId +
         "}";
     }
 }

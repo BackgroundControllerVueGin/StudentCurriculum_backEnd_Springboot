@@ -8,22 +8,22 @@ import java.io.Serializable;
  * </p>
  *
  * @author blackhaird
- * @since 2023-05-29
+ * @since 2023-05-30
  */
 public class Dean implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private Integer deanId;
+    private String deanJobId;
 
     private String deanName;
 
-    public Integer getDeanId() {
-        return deanId;
+    public String getDeanJobId() {
+        return deanJobId;
     }
 
-    public void setDeanId(Integer deanId) {
-        this.deanId = deanId;
+    public void setDeanJobId(String deanJobId) {
+        this.deanJobId = deanJobId;
     }
 
     public String getDeanName() {
@@ -37,7 +37,7 @@ public class Dean implements Serializable {
     @Override
     public String toString() {
         return "Dean{" +
-            "deanId = " + deanId +
+            "deanJobId = " + deanJobId +
             ", deanName = " + deanName +
         "}";
     }

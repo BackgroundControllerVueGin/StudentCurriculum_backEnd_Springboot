@@ -1,6 +1,6 @@
 package com.example.StudentCurriculum_backEnd_Springboot.student.mapper;
 
-import com.example.StudentCurriculum_backEnd_Springboot.student.entity.Dean;
+import com.example.StudentCurriculum_backEnd_Springboot.student.entity.Role;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author blackhaird
  * @since 2023-05-30
  */
-public interface DeanMapper extends BaseMapper<Dean> {
+public interface RoleMapper extends BaseMapper<Role> {
 
 }

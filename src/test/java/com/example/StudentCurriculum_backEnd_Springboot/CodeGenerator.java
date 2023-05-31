@@ -15,7 +15,7 @@ public class CodeGenerator {
         String password = "123456";
         String moduleName = "student";
         String mapperLocation = "D:\\Work_RJ\\java_spring\\StudentCurriculum_backEnd_Springboot\\src\\main\\resources\\mapper\\"+moduleName;
-        String tables = "attendance,class,course,courserecord,coursetable,dean,student,teacher,transcript,user";
+        String tables = "attendance,class,course,courserecord,coursetable,dean,role,student,teacher,transcript,user";
         FastAutoGenerator.create(url, username, password)
                 .globalConfig(builder -> {
                     builder.author("blackhaird") // 设置作者

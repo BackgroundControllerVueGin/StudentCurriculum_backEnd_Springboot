@@ -9,15 +9,15 @@ import java.time.LocalTime;
  * </p>
  *
  * @author blackhaird
- * @since 2023-05-29
+ * @since 2023-05-30
  */
 public class Courserecord implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private String courserecordId;
+    private Integer courserecordId;
 
-    private String coursetableId;
+    private Integer courserecordTableId;
 
     private Integer courserecordNumberOfWeek;
 
@@ -25,26 +25,24 @@ public class Courserecord implements Serializable {
 
     private LocalTime courserecordStartTime;
 
-    private Integer courseId;
+    private Integer courserecordCourseId;
 
     private String courserecordAddress;
 
-    private Integer courserecordCourseId;
-
-    public String getCourserecordId() {
+    public Integer getCourserecordId() {
         return courserecordId;
     }
 
-    public void setCourserecordId(String courserecordId) {
+    public void setCourserecordId(Integer courserecordId) {
         this.courserecordId = courserecordId;
     }
 
-    public String getCoursetableId() {
-        return coursetableId;
+    public Integer getCourserecordTableId() {
+        return courserecordTableId;
     }
 
-    public void setCoursetableId(String coursetableId) {
-        this.coursetableId = coursetableId;
+    public void setCourserecordTableId(Integer courserecordTableId) {
+        this.courserecordTableId = courserecordTableId;
     }
 
     public Integer getCourserecordNumberOfWeek() {
@@ -71,12 +69,12 @@ public class Courserecord implements Serializable {
         this.courserecordStartTime = courserecordStartTime;
     }
 
-    public Integer getCourseId() {
-        return courseId;
+    public Integer getCourserecordCourseId() {
+        return courserecordCourseId;
     }
 
-    public void setCourseId(Integer courseId) {
-        this.courseId = courseId;
+    public void setCourserecordCourseId(Integer courserecordCourseId) {
+        this.courserecordCourseId = courserecordCourseId;
     }
 
     public String getCourserecordAddress() {
@@ -87,25 +85,16 @@ public class Courserecord implements Serializable {
         this.courserecordAddress = courserecordAddress;
     }
 
-    public Integer getCourserecordCourseId() {
-        return courserecordCourseId;
-    }
-
-    public void setCourserecordCourseId(Integer courserecordCourseId) {
-        this.courserecordCourseId = courserecordCourseId;
-    }
-
     @Override
     public String toString() {
         return "Courserecord{" +
             "courserecordId = " + courserecordId +
-            ", coursetableId = " + coursetableId +
+            ", courserecordTableId = " + courserecordTableId +
             ", courserecordNumberOfWeek = " + courserecordNumberOfWeek +
             ", courserecordDayOfWeek = " + courserecordDayOfWeek +
             ", courserecordStartTime = " + courserecordStartTime +
-            ", courseId = " + courseId +
-            ", courserecordAddress = " + courserecordAddress +
             ", courserecordCourseId = " + courserecordCourseId +
+            ", courserecordAddress = " + courserecordAddress +
         "}";
     }
 }

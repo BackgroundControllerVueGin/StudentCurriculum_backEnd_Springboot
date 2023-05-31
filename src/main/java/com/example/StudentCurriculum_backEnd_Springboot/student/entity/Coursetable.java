@@ -1,6 +1,7 @@
 package com.example.StudentCurriculum_backEnd_Springboot.student.entity;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 /**
  * <p>
@@ -8,15 +9,15 @@ import java.io.Serializable;
  * </p>
  *
  * @author blackhaird
- * @since 2023-05-29
+ * @since 2023-05-30
  */
 public class Coursetable implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private String coursetableId;
+    private Integer coursetableId;
 
-    private String coursetableStartTime;
+    private LocalDate coursetableStartTime;
 
     private String coursetableClassId;
 
@@ -24,21 +25,21 @@ public class Coursetable implements Serializable {
 
     private String coursetableMajor;
 
-    private Integer deanId;
+    private String cousrsetableDeanJobId;
 
-    public String getCoursetableId() {
+    public Integer getCoursetableId() {
         return coursetableId;
     }
 
-    public void setCoursetableId(String coursetableId) {
+    public void setCoursetableId(Integer coursetableId) {
         this.coursetableId = coursetableId;
     }
 
-    public String getCoursetableStartTime() {
+    public LocalDate getCoursetableStartTime() {
         return coursetableStartTime;
     }
 
-    public void setCoursetableStartTime(String coursetableStartTime) {
+    public void setCoursetableStartTime(LocalDate coursetableStartTime) {
         this.coursetableStartTime = coursetableStartTime;
     }
 
@@ -66,12 +67,12 @@ public class Coursetable implements Serializable {
         this.coursetableMajor = coursetableMajor;
     }
 
-    public Integer getDeanId() {
-        return deanId;
+    public String getCousrsetableDeanJobId() {
+        return cousrsetableDeanJobId;
     }
 
-    public void setDeanId(Integer deanId) {
-        this.deanId = deanId;
+    public void setCousrsetableDeanJobId(String cousrsetableDeanJobId) {
+        this.cousrsetableDeanJobId = cousrsetableDeanJobId;
     }
 
     @Override
@@ -82,7 +83,7 @@ public class Coursetable implements Serializable {
             ", coursetableClassId = " + coursetableClassId +
             ", coursetableSchoolYear = " + coursetableSchoolYear +
             ", coursetableMajor = " + coursetableMajor +
-            ", deanId = " + deanId +
+            ", cousrsetableDeanJobId = " + cousrsetableDeanJobId +
         "}";
     }
 }

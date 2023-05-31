@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
  * </p>
  *
  * @author blackhaird
- * @since 2023-05-29
+ * @since 2023-05-30
  */
 public class Attendance implements Serializable {
 
@@ -19,9 +19,9 @@ public class Attendance implements Serializable {
 
     private LocalDateTime attendanceTime;
 
-    private String studentId;
+    private String attendanceStudentJobId;
 
-    private String courserecordId;
+    private Integer attendanceCourserecordId;
 
     public Integer getAttendanceId() {
         return attendanceId;
@@ -39,20 +39,20 @@ public class Attendance implements Serializable {
         this.attendanceTime = attendanceTime;
     }
 
-    public String getStudentId() {
-        return studentId;
+    public String getAttendanceStudentJobId() {
+        return attendanceStudentJobId;
     }
 
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
+    public void setAttendanceStudentJobId(String attendanceStudentJobId) {
+        this.attendanceStudentJobId = attendanceStudentJobId;
     }
 
-    public String getCourserecordId() {
-        return courserecordId;
+    public Integer getAttendanceCourserecordId() {
+        return attendanceCourserecordId;
     }
 
-    public void setCourserecordId(String courserecordId) {
-        this.courserecordId = courserecordId;
+    public void setAttendanceCourserecordId(Integer attendanceCourserecordId) {
+        this.attendanceCourserecordId = attendanceCourserecordId;
     }
 
     @Override
@@ -60,8 +60,8 @@ public class Attendance implements Serializable {
         return "Attendance{" +
             "attendanceId = " + attendanceId +
             ", attendanceTime = " + attendanceTime +
-            ", studentId = " + studentId +
-            ", courserecordId = " + courserecordId +
+            ", attendanceStudentJobId = " + attendanceStudentJobId +
+            ", attendanceCourserecordId = " + attendanceCourserecordId +
         "}";
     }
 }

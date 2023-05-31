@@ -1,6 +1,6 @@
 package com.example.StudentCurriculum_backEnd_Springboot.student.service;
 
-import com.example.StudentCurriculum_backEnd_Springboot.student.entity.Class;
+import com.example.StudentCurriculum_backEnd_Springboot.student.entity.Role;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author blackhaird
  * @since 2023-05-30
  */
-public interface IClassService extends IService<Class> {
+public interface IRoleService extends IService<Role> {
 
 }

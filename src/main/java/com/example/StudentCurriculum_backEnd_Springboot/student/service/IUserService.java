@@ -11,11 +11,13 @@ import java.util.Map;
  * </p>
  *
  * @author blackhaird
- * @since 2023-05-29
+ * @since 2023-05-30
  */
 public interface IUserService extends IService<User> {
 
     Map<String, Object> login(User user);
 
     Map<String, Object> info(String token);
+
+    Map<String, Object> register(User user);
 }
