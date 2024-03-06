@@ -1,7 +1,6 @@
 package com.example.StudentCurriculum_backEnd_Springboot.student.service;
 
 import com.example.StudentCurriculum_backEnd_Springboot.student.entity.Teacher;
-import com.example.StudentCurriculum_backEnd_Springboot.student.entity.Teacher;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.Map;
